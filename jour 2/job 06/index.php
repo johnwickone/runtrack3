@@ -2,12 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Job 05</title>
+    <title>Job 06</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<footer></footer>
 
 <script src="script.js"></script>
 </body>

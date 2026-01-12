@@ -1,16 +1,11 @@
-console.log("Script du Job 01 chargé !");
+window.addEventListener("scroll", function() {
+    const scrollTop = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const percent = scrollTop / maxScroll;
 
-const footer = document.querySelector("footer");
+    const red = Math.round(255 * percent);
+    const green = Math.round(255 * (1 - percent));
 
-function updateFooterColor() {
-    const scrollTop = window.scrollY; 
-    const docHeight = document.body.scrollHeight - window.innerHeight; 
-    const scrollPercent = (scrollTop / docHeight) * 100; 
-
-    const red = 255 - Math.round((scrollPercent / 100) * 255);
-    const green = Math.round((scrollPercent / 100) * 255);
-
-    footer.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
-}
-
-window.addEventListener("scroll", updateFooterColor);
+    document.querySelector("footer").style.backgroundColor =
+        `rgb(${red}, ${green}, 0)`;
+});
